@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="CSS/theme2.css" />
+    <link rel="stylesheet" href="CSS/button.css" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="/vendors/formvalidation/dist/css/formValidation.min.css"
+    />
+    <link rel="stylesheet" href="CSS/bootstrap-social.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <link rel="stylesheet" href="CSS/contact_page.css">
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Project 2</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <div class="logo">
+          <a
+            ><img
+              src="images/לוגו-ריל-טיים-גדול-מקורי-1024x980.gif"
+              alt=""
+              srcset=""
+              class="imgLogo"
+          /></a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+          <ul class="navlinks">
+            <li>
+              <a
+                class="btn btn-social-icon btn-youtube"
+                href="https://www.youtube.com/channel/UCqktX2qErNOzmgDDryxq1OQ"
+              >
+                <span class="fa fa-youtube"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn btn-social-icon btn-facebook"
+                href="https://www.facebook.com/RealTimeCollegeIL/"
+              >
+                <span class="fa fa-facebook"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn btn-social-icon btn-linkedin"
+                href="https://www.linkedin.com/company/rtgroup"
+              >
+                <span class="fa fa-linkedin"></span>
+              </a>
+            </li>
+
+            <li><a href="#">Contact</a></li>
+            <li class="menu-logout_btn">
+                <a
+                  aria-label="Thanks"
+                  class="h-button centered logOutBtn"
+                  data-text="log out"
+                  onclick="logout()"
+                >
+                  <span>G</span>
+                  <span>o</span>
+                  <span>o</span>
+                  <span>d</span>
+                  <span> </span>
+                  <span>B</span>
+                  <span>y</span>
+                  <span>e</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+        <span class="navTrigger">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </div>
+    </nav>
+    <section class="home">
+      <form action="" autocomplete="off" id="myLogin">
+        <div class="form-group">
+          <input
+            type="email"
+            id="login"
+            class="form-control"
+            value="kulikov.tolik@gmail.com"
+            name="username"
+            placeholder="Email"
+          />
+          <span id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            value="321307803"
+            name="password"
+            placeholder="ID"
+          />
+          <span id="password-error"></span>
+        </div>
+        <button
+          type="button"
+          id="sendlogin"
+          class="btn btn-primary"
+          onclick="Login()"
+        >
+          כניסה
+        </button>
+      </form>
+      <div id="bottom-box" class="bottom-box">
+        <div class="list-group block1">
+          <a href="#" class="list-group-item active"
+            ><i class="fa fa-key"></i>
+            <span onclick="studentFile()">פרטים אישיים</span></a
+          >
+          <a href="#" class="list-group-item"
+            ><i class="fa fa-credit-card"></i>
+            <span onclick="getCourse()">רשימת קורסים</span></a
+          >
+          <a href="#" class="list-group-item"
+            ><i class="fa fa-question-circle"></i>
+            <span onclick="getChart()">גרף ציונים</span></a
+          >
+          <a href="#" class="list-group-item"
+            ><i class="fa fa-arrow-circle-o-left"></i>
+            <span onclick="getCalendar()">יומן</span></a
+          >
+          <a href="#" class="list-group-item">
+              <i class="fa fa-book"></i> <span onclick="contactPage()">צור קשר</span></a>
+            <a href="#" class="list-group-item">
+                <i class="fa fa-book"></i> <span onclick="playVideo ()"> וידיאו</span></a>
+        </div>
+        
+        <div class="block2" id="block2">
+          <div id="div1"></div>
+          <div id="studentData"></div>
+          <div id="chart">
+            <canvas id="myChart" class="myChart myCanvas"></canvas>
+          </div>
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </section>
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    
+    <script src="JS/video.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/js.js" defer async></script>
+    <script type="text/javascript" src="js/caleandar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+    <script src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </body>
+</html>
